@@ -54,7 +54,7 @@ class Controls extends Component {
           />
           <button
             style={{ marginLeft: '1rem' }}
-            disabled={!selectedTask}
+            disabled={!selectedTask || selectedTask.stage === 0}
             data-testid="move-back-btn"
             name="back"
             onClick={this.props.handleClickAction}
@@ -63,7 +63,7 @@ class Controls extends Component {
           </button>
           <button
             style={{ marginLeft: '1rem' }}
-            disabled={!selectedTask}
+            disabled={!selectedTask || selectedTask.stage === 3}
             data-testid="move-forward-btn"
             name="forward"
             onClick={this.props.handleClickAction}
